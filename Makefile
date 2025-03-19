@@ -2,10 +2,13 @@ NAME = minishell
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -lreadline
 
-SRCS = split.c split_utils.c split_utils_utils.c command.c command2.c command_utils.c env.c env_utils.c exec.c exec_utils.c ft_heredoc.c utils.c main.c \
+SRCS = srcs/split.c srcs/split_utils.c srcs/split_utils_utils.c srcs/command.c srcs/command2.c \
+	   srcs/command_utils.c srcs/env.c srcs/env_utils.c srcs/exec.c srcs/exec_utils.c \
+	   srcs/ft_heredoc.c srcs/chevron.c srcs/chevrons_other.c srcs/chevron_utils.c \
+	   srcs/utils.c srcs/free.c srcs/main.c \
 	   
 
-LIBFTDIR = ../libft
+LIBFTDIR = libft
 LIBFT = $(LIBFTDIR)/libft.a
 
 all: $(LIBFT) $(NAME)
